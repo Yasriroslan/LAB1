@@ -1,0 +1,59 @@
+package QUIZ1;
+		
+import java.util.Scanner;
+
+public class quiz1 {
+
+	public static void main(String[] args) {
+			// TODO Auto-generated method stub
+				
+			Scanner sc = new Scanner(System.in);
+				
+			double total_price;
+			int numItems;
+			int quantity;
+			double price;
+			double tolsum = 0;
+			double sum;
+			double disprice;
+			double discount;
+				
+			System.out.println("ENTER NUMBER OF ITEM : ");
+			numItems = sc.nextInt();
+				
+			if (numItems > 3) {
+				System.out.println("SORRY OVER THE LIMIT");
+					return;
+				}
+				
+				for (int i = 0; i < numItems; i++) {
+					System.out.println("ENTER QUANTITY ITEM : ");
+					quantity = sc.nextInt();
+					System.out.println("ENTER PRICE ITEM : ");
+					price = sc.nextDouble();
+					
+					sum = quantity * price;
+					tolsum = tolsum + sum;
+				}
+				
+				if (tolsum > 100) {
+					discount = tolsum * 0.2;
+					disprice = tolsum - discount;
+				}
+				else {
+					discount = tolsum * 0.1;
+					disprice = tolsum - discount;
+				}
+				
+				System.out.println("Total price: RM" + tolsum);
+				System.out.println("Discount received: RM" + discount);
+				System.out.println("Price to be paid: RM" + disprice);
+
+			}
+
+		
+		
+		
+		
+	}
+
