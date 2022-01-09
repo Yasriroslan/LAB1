@@ -1,0 +1,40 @@
+package QUIZ1;
+import java.util.Scanner;
+public class lab2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner scan = new Scanner(System.in);
+		
+		double tolsales;
+		double tolhours;
+		double commission = 0;
+		double dailyWages;
+		double totalwages;
+		
+		System.out.println("ENTER THE SALE : ");
+		tolsales = scan.nextDouble();
+		
+		System.out.println("ENTER THE WORK HOUR: ");
+		tolhours = scan.nextDouble();
+		
+		if (tolsales >= 150 && tolsales <= 300)
+			commission = tolsales * 0.05;// percent for total sale 
+		
+		else if (tolsales >= 301 && tolsales <= 500)
+			commission = tolsales * 0.1;// percent for total sale 
+		
+		else if (tolsales > 500)
+			commission = tolsales * 0.15;// percent for total sale 
+		
+		dailyWages = tolhours * 5.0;
+		totalwages = dailyWages + commission;
+		
+		System.out.println("COMMISSION: RM" + commission);
+		System.out.println("DAILY WAGES: RM" + totalwages);
+
+	}
+
+	
+	}
